@@ -1,6 +1,4 @@
 #!/bin/bash
-
-# 原生架構 OpenCV 建構腳本
 project_root=$(pwd)
 opencv_path="lib/opencv"
 install_path=${project_root}/${opencv_path}/opencv4
@@ -49,8 +47,9 @@ cmake .. \
     -DWITH_PROTOBUF=OFF \
     -DWITH_WEBP=OFF \
     -DWITH_JASPER=OFF \
-    -DWITH_OPENMP=ON \
     -DWITH_QUIRC=OFF \
+    -DWITH_OPENMP=ON \
+    -DWITH_ADE=OFF \
     \
     -DBUILD_opencv_apps=OFF \
     -DBUILD_opencv_java=OFF \
@@ -79,4 +78,4 @@ cmake .. \
 make -j$(nproc)
 make install
 
-echo "原生架構 OpenCV 編譯完成，安裝於: ${install_path}"
+echo "OpenCV Path: ${install_path}"

@@ -1,2 +1,4 @@
 build
 opencv
+ncnn
+*DS_Store
