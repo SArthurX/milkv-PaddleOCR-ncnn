@@ -11,14 +11,14 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(LIB_ROOT "${CMAKE_SOURCE_DIR}")
 
 # opencv (allow override)
-set(OpenCV_DIR "${CMAKE_SOURCE_DIR}/opencv4/lib/cmake/opencv4" CACHE PATH "OpenCV config path")
+set(OpenCV_DIR "${CMAKE_SOURCE_DIR}/lib/opencv/opencv4/lib/cmake/opencv4" CACHE PATH "OpenCV config path")
 find_package(OpenCV REQUIRED)
 find_package(Iconv QUIET)
 find_package(OpenEXR QUIET)
 # openmp (optional for cross)
 find_package(OpenMP QUIET)
 # ncnn
-set(ncnn_DIR "${CMAKE_SOURCE_DIR}/lib/cmake/ncnn" CACHE PATH "ncnn cmake config path")
+set(ncnn_DIR "${CMAKE_SOURCE_DIR}/lib/ncnn/lib/cmake/ncnn" CACHE PATH "ncnn cmake config path")
 find_package(ncnn REQUIRED)
 
 # main
