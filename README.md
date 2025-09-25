@@ -6,8 +6,9 @@ This repository provides a C++ implementation of PaddleOCR optimized for RISC-V 
 ## System Requirements
 
 ### Dependencies
-- **OpenCV** x
+- **OpenCV** 
 - **ncnn** inference framework
+- **risc-toolchain**
 
 ## Installation Guide
 
@@ -42,13 +43,13 @@ cd lib/ncnn
 ./build.sh
 
 # After completion, lib/cmake/ncnn directory will be generated
+# You need to change lib PATH
 ```
 
 **For RISC-V platform:**
 ```bash
 # Run RISC-V ncnn build script
-cd tools
-./build_ncnn_risc.sh
+./tool/build_ncnn_risc.sh
 ```
 
 After compilation, ncnn will be installed in:
@@ -245,10 +246,11 @@ This project follows the license terms in the [LICENSE](LICENSE) file.
 
 ## Acknowledgments
 
+- [Avafly/PaddleOCR-ncnn-CPP](https://github.com/Avafly/PaddleOCR-ncnn-CPP)
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) 
 - [ncnn](https://github.com/Tencent/ncnn) 
 - [OpenCV](https://opencv.org/)
-- [Avafly](https://github.com/Avafly/PaddleOCR-ncnn-CPP)
+
 
 ## Contributing
 
