@@ -48,7 +48,7 @@ cmake .. \
     -DWITH_WEBP=OFF \
     -DWITH_JASPER=OFF \
     -DWITH_QUIRC=OFF \
-    -DWITH_OPENMP=ON \
+    -DWITH_OPENMP=OFF \
     -DWITH_ADE=OFF \
     \
     -DBUILD_opencv_apps=OFF \

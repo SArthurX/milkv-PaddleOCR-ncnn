@@ -1,4 +1,9 @@
 build
-opencv
-ncnn
+
+lib/opencv/build*
+lib/opencv/opencv4*
+lib/ncnn/build*
+lib/ncnn/ncnn*
+
 *DS_Store
+tmp

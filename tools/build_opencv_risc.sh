@@ -9,16 +9,16 @@ mkdir -p ${build_dir}
 cd ${build_dir}
 
 
-RISCV_TOOLCHAIN_PATH="/usr"
-RISCV_SYSROOT="/usr/riscv64-linux-gnu"
+RISCV_TOOLCHAIN_PATH="${project_root}/tools/toolchain/gcc/riscv64-linux-musl-x86_64"
+RISCV_SYSROOT="${project_root}/tools/toolchain/gcc/riscv64-linux-musl-x86_64/sysroot"
 
 cmake .. \
     -DCMAKE_INSTALL_PREFIX=${install_path} \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_SYSTEM_NAME=Linux \
     -DCMAKE_SYSTEM_PROCESSOR=riscv64 \
-    -DCMAKE_C_COMPILER=${RISCV_TOOLCHAIN_PATH}/bin/riscv64-linux-gnu-gcc \
-    -DCMAKE_CXX_COMPILER=${RISCV_TOOLCHAIN_PATH}/bin/riscv64-linux-gnu-g++ \
+    -DCMAKE_C_COMPILER=${RISCV_TOOLCHAIN_PATH}/bin/riscv64-unknown-linux-musl-gcc \
+    -DCMAKE_CXX_COMPILER=${RISCV_TOOLCHAIN_PATH}/bin/riscv64-unknown-linux-musl-g++ \
     -DCMAKE_FIND_ROOT_PATH=${RISCV_SYSROOT} \
     -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER \
     -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY=ONLY \
@@ -62,6 +62,7 @@ cmake .. \
     -DWITH_JASPER=OFF \
     -DWITH_OPENJPEG=OFF \
     -DBUILD_OPENJPEG=OFF \
+    -DWITH_AVIF=OFF \
     -DWITH_QUIRC=OFF \
     -DWITH_ADE=OFF \
     -DWITH_OPENMP=ON \
