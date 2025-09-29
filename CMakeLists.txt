@@ -43,9 +43,9 @@ endif()
 
 #ncnn
 if(BUILD_FOR_RISCV)
-    set(ncnn_DIR "${CMAKE_SOURCE_DIR}/lib/ncnn/ncnn_riscv/lib/cmake/ncnn" CACHE PATH "ncnn cmake config path for RISC-V")
+    set(ncnn_DIR "${CMAKE_SOURCE_DIR}/lib/ncnn/build/ncnn_riscv/lib/cmake/ncnn" CACHE PATH "ncnn cmake config path for RISC-V")
 else()
-    set(ncnn_DIR "${CMAKE_SOURCE_DIR}/lib/ncnn/lib/cmake/ncnn" CACHE PATH "ncnn cmake config path")
+    set(ncnn_DIR "${CMAKE_SOURCE_DIR}/lib/ncnn/build/lib/cmake/ncnn" CACHE PATH "ncnn cmake config path")
 endif()
 find_package(ncnn REQUIRED)
 
