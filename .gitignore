@@ -7,3 +7,5 @@ lib/ncnn/ncnn*
 
 *DS_Store
 tmp
+
+.vscode

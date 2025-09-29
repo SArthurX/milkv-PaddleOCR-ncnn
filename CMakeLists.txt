@@ -23,9 +23,9 @@ if(BUILD_FOR_RISCV)
     set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
     
     
-    set(OpenCV_DIR "${CMAKE_SOURCE_DIR}/lib/opencv/opencv4_riscv/lib/cmake/opencv4" CACHE PATH "OpenCV config path for RISC-V")
+    set(OpenCV_DIR "${CMAKE_SOURCE_DIR}/lib/opencv/build/opencv4_riscv/lib/cmake/opencv4" CACHE PATH "OpenCV config path for RISC-V")
 else()
-    set(OpenCV_DIR "${CMAKE_SOURCE_DIR}/lib/opencv/opencv4/lib/cmake/opencv4" CACHE PATH "OpenCV config path")
+    set(OpenCV_DIR "${CMAKE_SOURCE_DIR}/lib/opencv/build/opencv4/lib/cmake/opencv4" CACHE PATH "OpenCV config path")
 endif()
 
 find_package(OpenCV REQUIRED)

@@ -1,13 +1,12 @@
 #!/bin/bash
 project_root=$(pwd)
 opencv_path="lib/opencv"
-install_path=${project_root}/${opencv_path}/opencv4_riscv
-build_dir=${project_root}/${opencv_path}/build_riscv
+build_dir=${project_root}/${opencv_path}/build
+install_path=${build_dir}/opencv4_riscv
 
 rm -rf ${build_dir}
 mkdir -p ${build_dir}
 cd ${build_dir}
-
 
 RISCV_TOOLCHAIN_PATH="${project_root}/tools/toolchain/gcc/riscv64-linux-musl-x86_64"
 RISCV_SYSROOT="${project_root}/tools/toolchain/gcc/riscv64-linux-musl-x86_64/sysroot"

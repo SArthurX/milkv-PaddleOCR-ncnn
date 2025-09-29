@@ -1,8 +1,8 @@
 #!/bin/bash
 project_root=$(pwd)
 opencv_path="lib/opencv"
-install_path=${project_root}/${opencv_path}/opencv4
 build_dir=${project_root}/${opencv_path}/build
+install_path=${build_dir}/opencv4
 
 rm -rf ${build_dir}
 mkdir -p ${build_dir}
